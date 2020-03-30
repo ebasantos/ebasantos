@@ -1,23 +1,22 @@
-import  'react-native-gesture-handler'
-import {createAppContainer} from 'react-navigation'
-import {createStackNavigator} from 'react-navigation-stack'
-import Colors from './constantes/Colors'
-import MainScreen from './pages/Main'
+import "react-native-gesture-handler";
+import { createAppContainer } from "react-navigation";
+import { createStackNavigator } from "react-navigation-stack";
+import Colors from "./constantes/Colors";
+import MainScreen from "./pages/Main";
 
 const rootStack = createStackNavigator({
   Main: {
     screen: MainScreen,
     navigationOptions: {
-      headerTitleAlign: 'center',
+      headerTitleAlign: "center",
       headerBackTitleVisible: false,
       headerStyle: {
-        backgroundColor: Colors.black
+        backgroundColor: Colors.primary
       },
       headerTintColor: Colors.white,
-      title: 'Heróis'
+      title: "Heróis"
     }
   }
-})
+});
 
-
-export default createAppContainer({rootStack})
+export default createAppContainer(rootStack);
