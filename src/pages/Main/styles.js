@@ -1,6 +1,7 @@
 import styled from "styled-components/native";
 import Colors from "../../constantes/Colors";
 import { Button } from "galio-framework";
+import {TouchableOpacity} from 'react-native-gesture-handler'
 
 export const Container = styled.View`
   flex: 1;
@@ -15,7 +16,8 @@ export const Form = styled.View`
 `;
 
 export const Input = styled.TextInput.attrs({
-  placeholderTextColor: Colors.gray
+  placeholderTextColor: Colors.gray,
+  placeholder: 'Digita o nome de um herói...'
 })`
   flex: 1;
   height: 40px;
@@ -40,23 +42,19 @@ export const SubmitButton = styled(Button).attrs({
   height: 40px;
 `;
 
-export const HeroButton = styled.TouchableOpacity`
+export const HeroButton = styled(TouchableOpacity)`
   flex-direction: row;
   padding: 10px;
   align-items: center;
 `;
 
+
 export const HeroImage = styled.Image`
-  height: 50px;
   width: 50px;
+  height: 50px;
   border-radius: 25px;
-`;
+`
 
 export const HeroName = styled.Text`
-  margin-left: 10px;
-`;
-
-export const HeroSeparator = styled.View`
-  height: 1px;
-  background-color: ${Colors.gray};
-`;
+  margin-left: 5px;
+`
